@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">HOUSE_CHORE</string>
+
+    <string name="no_recipe">You have not added any recipe yet</string>
+    <string name="no_chore">아직 등록된 집안일이 없습니다.</string>
+    <string name="no_bowl">You have not added any bowl yet</string>
+
+    <string name="no_favorite_recipe">No favorite recipe is added yet</string>
+    <string name="no_favorite_chore">No favorite chore is added yet</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string-array name="measuring_unit">
+        <item>ml</item>
+        <item>L</item>
+        <item>g</item>
+        <item>kg</item>
+    </string-array>
+
+    <string-array name="bowl_type">
+        <item>cylinder</item>
+        <item>cup</item>
+    </string-array>
+<string name="hello_world">Hello world!</string>
+<string name="action_settings">Settings</string>
+<string name="title_activity_add_contact">Add Contact</string>
+<string name="title_activity_contacts_display">Contact Display</string>
+<string name="title_activity_contacts_detail">Contacts Detail</string>
+<string name="title_activity_edit_contact">Edit Contacts</string>
+
+</resources>

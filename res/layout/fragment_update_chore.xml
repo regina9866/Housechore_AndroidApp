@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="fill_parent"
+    android:weightSum="1"
+    tools:context="com.example.user.housechore.Fragment.Chore.ChoreAddFragment"
+
+    >
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1"
+        android:id="@+id/linearLayout">
+    <!--집안일 명 입력공간 -->
+        <TextView
+            android:layout_marginTop="10dp"
+            android:text="*register your own task for you home chore"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/textView2"
+            android:textSize="18sp"
+            android:textAlignment="center" />
+
+        <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chore_name"
+        >
+        <!--집안일이름 label-->
+            <TextView
+                android:id="@+id/task_name"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="Task Name:"
+                android:textStyle="bold" />
+        <!--이름 입력창-->
+            <EditText
+                android:id="@+id/edit_task_name"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="70dp"
+                android:text="enter task name" />
+
+    </LinearLayout>
+
+
+    <!--버튼 공간 -->
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/btn_space"
+        android:layout_below="@+id/chore_name"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true">
+        <!--걸리는 시간-->
+        <Button
+            android:id="@+id/btn_how_long"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="How long?"
+            android:background="@color/ButtonYellow"
+            android:textColor="@color/gray"
+            android:textStyle="bold"
+            android:layout_marginRight="40dp"
+            />
+        <!--취소 버튼 -->
+        <Button
+            android:id="@+id/btn_point"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="points"
+            android:background="@color/ButtonYellow"
+            android:textColor="@color/gray"
+            android:textStyle="bold"
+            android:layout_toRightOf="@+id/btn_update"/>
+    </LinearLayout>
+
+
+    <!--담장자 입력공간 -->
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/assign_space"
+        android:layout_below="@+id/btn_space"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+        <!--담당자이름 label-->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="Assign:"
+            android:textStyle="bold"
+            android:id="@+id/assign"
+            />
+        <!--담당자이름 입력창-->
+        <EditText
+            android:id="@+id/edit_assign"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="70dp"
+            android:text="enter assigned person" />
+
+    </LinearLayout>
+
+
+
+    <!--반복설정및 완료날짜 설정공간 -->
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/date_pick_space"
+        android:layout_below="@+id/assign_space"
+        >
+        <!--due date lable-->
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_marginTop="20dp"
+            android:text="Due date"
+            android:textStyle="bold"
+            android:id="@+id/due_date"
+            />
+        <DatePicker
+            android:layout_width="match_parent"
+            android:layout_height="88dp"
+            android:id="@+id/datePicker"
+            android:calendarViewShown="false"
+            android:spinnersShown="true"
+
+        />
+
+    </LinearLayout>
+
+    <!--버튼 공간 -->
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:id="@+id/repeat_batn_space"
+        android:layout_below="@+id/date_pick_space"
+        android:orientation="horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerHorizontal="true">
+        <!--취소 버튼 -->
+        <Button
+            android:id="@+id/btn_repeat"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="repeat"
+            android:background="@color/ButtonYellow"
+            android:textColor="@color/gray"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+    <!--폰에서 그림 가져오는 공간 -->
+    <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        android:orientation="vertical" android:layout_width="fill_parent"
+        android:layout_height="300dp"
+       android:layout_below="@+id/repeat_batn_space"
+        android:background="#FFFFFF"
+        android:layout_marginTop="20dp"
+        android:backgroundTint="#EEEEEE"
+        android:layout_weight="3.13">
+
+        <Button
+            android:id="@+id/btn_select_gallery"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:text="Add Image +"
+            android:background="@color/ButtonYellow"
+            android:textColor="@color/gray"
+            android:textStyle="bold"
+            android:typeface="sans"
+            />
+
+        <ImageView
+            android:id="@+id/imageView1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter" />
+
+    </LinearLayout>
+
+        <!--집안일상세설명공간-->
+        <LinearLayout
+            android:id="@+id/chore_note_space"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal">
+            <!--집안일이름 label-->
+            <TextView
+                android:id="@+id/notes"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="notes:"
+                android:textStyle="bold" />
+            <!--이름 입력창-->
+            <EditText
+                android:id="@+id/edit_notes"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginLeft="70dp"
+                android:text="explain the task" />
+
+        </LinearLayout>
+        <!--버튼 공간 -->
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="@dimen/activity_horizontal_margin"
+            android:layout_alignParentBottom="true"
+            android:layout_centerInParent="true"
+            >
+            <!--업로드 버튼-->
+            <Button
+                android:id="@+id/btn_update"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="40dp"
+                android:background="@color/ButtonYellow"
+                android:text="UPDATE"
+                android:textColor="@color/gray"
+                android:textStyle="bold" />
+            <!--취소 버튼 -->
+            <Button
+                android:id="@+id/btn_bancel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@+id/btn_update"
+                android:background="@color/ButtonYellow"
+                android:textColor="@color/gray"
+                android:text="CANCEL"
+
+                android:textStyle="bold" />
+        </LinearLayout>
+
+    </LinearLayout>
+</ScrollView>
+
+</RelativeLayout>
